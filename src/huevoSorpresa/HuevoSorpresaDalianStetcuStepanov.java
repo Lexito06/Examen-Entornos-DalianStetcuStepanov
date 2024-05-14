@@ -1,15 +1,47 @@
 package huevoSorpresa;
-public class HuevoSorpresa {
+public class HuevoSorpresaDalianStetcuStepanov {
     private int unidades;//número de huevos que quedan 
     private double precio;//precio actual de un huevo sorpresa
     private String sorpresa;//nombre de la sorpresa que incluye huevo sorpresa
     private double precio_max;//precio máximo que puede tener un huevo sorpresa
+
+	public int getUnidades() {
+		return unidades;
+	}
+
+	public void setUnidades(int unidades) {
+		this.unidades = unidades;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public String getSorpresa() {
+		return sorpresa;
+	}
+
+	public void setSorpresa(String sorpresa) {
+		this.sorpresa = sorpresa;
+	}
+
+	public double getPrecio_max() {
+		return precio_max;
+	}
+
+	public void setPrecio_max(double precio_max) {
+		this.precio_max = precio_max;
+	}
     
     
-public HuevoSorpresa(){}
+public HuevoSorpresaDalianStetcuStepanov(){}
 
 
-public HuevoSorpresa(int unidades, double precio, String sorpresa, double precio_max){
+public HuevoSorpresaDalianStetcuStepanov(int unidades, double precio, String sorpresa, double precio_max){
     this.unidades=unidades;
     this.precio=precio;
     this.sorpresa=sorpresa;
@@ -25,7 +57,7 @@ public double obtenerPrecio(){return this.precio;}
 
 public void modificarUnidades(int unidades){this.unidades=unidades;}
 
-public void sacarHuevosSorpresas(int unidades, double dinero) throws Exception{
+public void sacarHuevosSorpresas(int unidades, double dinero, String sorpresa) throws Exception{
    if (dinero <= 0) {
    	throw new Exception("Se necesita una cantidad de dinero positiva");
         }
